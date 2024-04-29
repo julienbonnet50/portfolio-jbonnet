@@ -4,10 +4,14 @@ Julien Portfolio website
 
 ## Description
 
-Website realised in python with Django
+Website realised in React.js, Next.js Tailwind css.
+
 
 ## Getting Started
 
-### Dependencies
 
-* Django==5.0.4
+Todo :
+
+Add mongoDB 
+
+### Dependencies
