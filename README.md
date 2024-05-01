@@ -15,3 +15,9 @@ Todo :
 Add mongoDB 
 
 ### Dependencies
+
+```bash
+npm install react
+npm install daisyui
+npm install tailwind
+```
