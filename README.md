@@ -20,4 +20,5 @@ Add mongoDB
 npm install react
 npm install daisyui
 npm install tailwind
+npm install framer-motion
 ```
