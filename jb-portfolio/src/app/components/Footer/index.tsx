@@ -7,9 +7,9 @@ interface Props {}
 const Footer = (props: Props) => {
   const info = useContext(InfoContext);
   return (
-    <footer className="footer footer-center p-6 bg-primary text-primary-content">
+    <footer className="footer footer-center p-6 bg-base-content text-primary-content">
       <div>
-        <p>Copyright © 2022 - All rights reserved</p>
+        <p>Copyright © 2024 - All rights reserved</p>
         <div className="grid grid-flow-col gap-4">
           <a href={info.github} target="_blank" rel="noreferrer">
             <svg

@@ -17,9 +17,12 @@ export default function Home() {
 
       <Navbar />
 
-      <img src={info.headshot} alt="Alternative Text"></img>
-
-      <Avatar />
+      <Avatar />      
+      
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       <h2
           id="Projects"

@@ -8,7 +8,6 @@ interface Props {}
 const Navbar = (props: Props) => {
   const info = useContext(InfoContext);
   const { scrollY }: any = useScroll();
-  // had to specify as any, best fix for right now
 
   const [hidden, setHidden] = useState(false);
 
@@ -21,9 +20,7 @@ const Navbar = (props: Props) => {
   }
 
   const variants = {
-    /** this is the "visible" key and it's respective style object **/
     visible: { top: "0vh" },
-    /** this is the "hidden" key and it's respective style object **/
     hidden: { top: "-20vh" },
   };
 
@@ -72,7 +69,7 @@ const Navbar = (props: Props) => {
             </li>
           </ul>
         </div>
-        <a href="" className="btn btn-ghost text-accent normal-case text-xl">
+        <a href="" className="btn btn-ghost text-base-content normal-case text-xl">
           {info.name}
         </a>
       </div>
