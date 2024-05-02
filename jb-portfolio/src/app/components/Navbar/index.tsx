@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { InfoContext } from "../../page";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
+
+import { InfoContext } from "../../page";
+
 interface Props {}
 
 const Navbar = (props: Props) => {
