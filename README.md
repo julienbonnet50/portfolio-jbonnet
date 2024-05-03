@@ -21,4 +21,8 @@ npm install react
 npm install daisyui
 npm install tailwind
 npm install framer-motion
+npm install axios
+npm install emailjs
+npm install @emailjs/browser --save
+
 ```

@@ -8,6 +8,7 @@ import info from "../info";
 import Navbar from "../app/components/Navbar";
 import Footer from "../app/components/Footer";
 import Avatar from "../app/components/Avatar"
+import Contact from  "../app/components/Contact"
 
 export const InfoContext = React.createContext(info);
 
@@ -108,7 +109,7 @@ export default function Home() {
           priority
         />
       </div>
-
+      <Contact></Contact>
       <Footer></Footer>
     </main>
   );
