@@ -110,6 +110,7 @@ export default function Home() {
         />
       </div>
       <Contact></Contact>
+      <br></br>
       <Footer></Footer>
     </main>
   );

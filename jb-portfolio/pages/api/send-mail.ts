@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
-
-console.log("Starting POST method")
+import axios from '../../src/app/utils/axios'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     const { serviceId, templateId, templateParams, userId } = req.body;
 
+    console.log(`Trying to send post with service_id: ${process.env.USER_ID}, template_id: ${process.env.TEMPLATE_ID}, user_id: ${process.env.USER_ID}`)
     try {
       const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
         service_id: process.env.SERVICE_ID,
