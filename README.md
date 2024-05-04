@@ -24,5 +24,5 @@ npm install framer-motion
 npm install axios
 npm install emailjs
 npm install @emailjs/browser --save
-
+npm install nodemailer cors
 ```

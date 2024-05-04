@@ -1,4 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
+import axios from "axios"
 import emailjs from '@emailjs/browser';
 
 import { InfoContext } from "../../page";
@@ -6,7 +7,6 @@ import { InfoContext } from "../../page";
 interface Props {}
 
 export const Contact = (props: Props) => {
-    console.log("started Contact components")
     require('dotenv').config();
     const info = useContext(InfoContext);
 
@@ -19,11 +19,6 @@ export const Contact = (props: Props) => {
     const [alertState, setAlertState] = useState(false);
     const [loadState, setLoadState] = useState(false);
 
-    const SERVICE_ID_V: string = process.env.REACT_APP_SERVICE_ID ?? 'null';
-    const TEMPLATE_ID_V: string = process.env.REACT_APP_TEMPLATE_ID ?? 'null';
-    const USER_ID_V: string = process.env.REACT_APP_USER_ID ?? 'null';
-    
-    console.log(`Resolved service id --- : ${SERVICE_ID_V}, template_id : ${TEMPLATE_ID_V}, user_id : ${USER_ID_V}`)
 
 
     const handleInputChange = ({
@@ -33,10 +28,7 @@ export const Contact = (props: Props) => {
         setFormState({ ...formState, [name]: value });
     };
 
-    const handleSubmit = (event: React.SyntheticEvent) => {
-        console.log("Starting submit")
-        console.log(`Resolved service id : ${SERVICE_ID_V}, template_id : ${TEMPLATE_ID_V}, user_id : ${USER_ID_V}`)
-
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoadState(true);
       
@@ -46,29 +38,25 @@ export const Contact = (props: Props) => {
           message: formState.message,
         };
       
-        console.log("Service ID : {} ", SERVICE_ID_V)
-        emailjs
-          .send(SERVICE_ID_V,
-            TEMPLATE_ID_V,
-            templateParams,
-            USER_ID_V
-          )
-          .then((res) => {
-            console.log(res);
-            setLoadState(false);
-            setFormState({
-              name: "",
-              email: "",
-              message: "",
-            });
-            setAlertState(true);
-            setTimeout(() => {
-              setAlertState(false);
-            }, 4000);
-          })
-          .catch((error) => {
-            console.error('FAILED...', error.text);
+        axios.post('/api/send-email', {
+          templateParams: templateParams,
+        })
+        .then((response) => {
+          console.log(response.data);
+          setLoadState(false);
+          setFormState({
+            name: "",
+            email: "",
+            message: "",
           });
+          setAlertState(true);
+          setTimeout(() => {
+            setAlertState(false);
+          }, 4000);
+        })
+        .catch((error) => {
+          console.error('FAILED...', error);
+        });
       };
   
     return (
