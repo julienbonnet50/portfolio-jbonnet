@@ -89,23 +89,23 @@ export const Contact = (props: Props) => {
                     value={formState.name}
                     name="name"
                     placeholder="Name"
-                    className="input input-bordered input-info  w-full max-w-xs"
+                    className="input input-bordered input-base-content  w-full max-w-xs"
                     onChange={handleInputChange} />
                 <input
                     type="text"
                     value={formState.email}
                     name="email"
                     placeholder="Email"
-                    className="input input-bordered input-info  w-full max-w-xs"
+                    className="input input-bordered input-base-content  w-full max-w-xs"
                     onChange={handleInputChange} />
                 <textarea
                     value={formState.message}
                     name="message"
-                    className="textarea textarea-info  w-full max-w-xs  h-40"
+                    className="textarea textarea-base-content  w-full max-w-xs  h-40"
                     placeholder="Message"
                     onChange={handleInputChange}
                 ></textarea>
-                <button className="btn btn-info  mt-2 mb-12">Submit</button>
+                <button className="btn btn-outline  mt-2 mb-12">Submit</button>
                 {loadState ? <progress className="progress w-56"></progress> : null}
             </form>
 
