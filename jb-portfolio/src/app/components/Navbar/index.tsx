@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 import { InfoContext } from "../../page";
 
@@ -25,7 +25,7 @@ const Navbar = (props: Props) => {
   };
 
   useEffect(() => {
-    return scrollY.onChange(() => update());
+    return scrollY.on("change",() => update());
 
   });
   return (
@@ -63,7 +63,7 @@ const Navbar = (props: Props) => {
               </li>
             ))}
             <li>
-              <a target="_blank" href="/Resume.pdf" rel="noreferrer">
+              <a target="_blank" href="/Julien_BONNET_Resume.pdf" rel="noreferrer">
                 Resume
               </a>
             </li>
@@ -81,7 +81,7 @@ const Navbar = (props: Props) => {
             </li>
           ))}
           <li>
-            <a target="_blank" href="/Resume.pdf" rel="noreferrer">
+            <a target="_blank" href="/Julien_BONNET_Resume.pdf" rel="noreferrer">
               Resume
             </a>
           </li>

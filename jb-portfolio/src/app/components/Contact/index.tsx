@@ -1,14 +1,14 @@
 import React, { useContext, useState, useRef } from "react";
 import axios from '../../utils/axios'
-import emailjs from '@emailjs/browser';
 
-import { InfoContext } from "../../page";
+import { FontContext, InfoContext } from "../../page";
 
 interface Props {}
 
 export const Contact = (props: Props) => {
     require('dotenv').config();
     const info = useContext(InfoContext);
+    const font = useContext(FontContext)
 
     const [formState, setFormState] = useState({
         name: "",
@@ -60,7 +60,7 @@ export const Contact = (props: Props) => {
       };
   
     return (
-        <div className="bg-base-200 mt-12">
+        <div className={`bg-base-200 mt-12 ${font.generalMarginBottom}`}>
             <h2
                 id="Contact"
                 className="flex justify-center text-4xl pt-12 font-bold mb-6 "
