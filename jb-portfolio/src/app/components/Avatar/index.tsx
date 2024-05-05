@@ -27,7 +27,7 @@ const Hero = () => {
                 Hi, I&apos;m {info.name}
               </h1>
               <p className="text-2xl py-6">{info.summary}</p>
-              <a href="#Contact" className="btn btn-outline">
+              <a href="#Contact" className="text-xl btn btn-outline ">
                 Contact Me
               </a>
             </div>

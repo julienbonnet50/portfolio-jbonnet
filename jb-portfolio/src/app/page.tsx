@@ -33,8 +33,7 @@ export default function Home() {
         </h2>
         <div className={`${font.pathSubTitleFontSize} flex justify-center mx-12 mb-[70px]`}>
           <p>
-            All projects have test credentials of &quot;test123&quot; for
-            username and password.
+            Here's all project I'm currently working on.
           </p>
         </div>
 

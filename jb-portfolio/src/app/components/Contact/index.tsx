@@ -7,6 +7,7 @@ interface Props {}
 
 export const Contact = (props: Props) => {
     require('dotenv').config();
+    
     const info = useContext(InfoContext);
     const font = useContext(FontContext)
 
@@ -18,7 +19,6 @@ export const Contact = (props: Props) => {
 
     const [alertState, setAlertState] = useState(false);
     const [loadState, setLoadState] = useState(false);
-
 
 
     const handleInputChange = ({

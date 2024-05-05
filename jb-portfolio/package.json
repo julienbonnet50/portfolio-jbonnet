@@ -2,6 +2,7 @@
   "name": "jb-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://julienbonnet50.github.io/portfolio-jbonnet/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
