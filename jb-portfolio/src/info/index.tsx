@@ -1,3 +1,5 @@
+import React from "react"
+
 const info = {
     name: "Julien Bonnet",
     headshot: "/IMG_6126.jpg",
@@ -18,5 +20,7 @@ const info = {
     otherProjects: [    
     ]
   }
+
+const InfoContext = React.createContext(info);
   
-  export default info
+export default info

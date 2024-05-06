@@ -1,11 +1,10 @@
 import { useContext } from "react";
 
-import { InfoContext } from "../../page";
+import info from "../../../info"
 
 interface Props {}
 
 const Footer = (props: Props) => {
-  const info = useContext(InfoContext);
   return (
     <footer className="footer footer-center p-6 bg-base-content text-primary-content">
       <div>

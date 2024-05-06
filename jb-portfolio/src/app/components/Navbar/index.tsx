@@ -1,12 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 
-import { InfoContext } from "../../page";
+import info from "../../../info"
 
 interface Props {}
 
 const Navbar = (props: Props) => {
-  const info = useContext(InfoContext);
   const { scrollY }: any = useScroll();
 
   const [hidden, setHidden] = useState(false);

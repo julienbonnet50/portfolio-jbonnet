@@ -1,15 +1,13 @@
 import React, { useContext, useState, useRef } from "react";
 import axios from '../../utils/axios'
 
-import { FontContext, InfoContext } from "../../page";
+import info from "../../../info"
+import font from "../../../font"
 
 interface Props {}
 
 export const Contact = (props: Props) => {
     require('dotenv').config();
-    
-    const info = useContext(InfoContext);
-    const font = useContext(FontContext)
 
     const [formState, setFormState] = useState({
         name: "",

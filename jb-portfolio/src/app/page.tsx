@@ -12,8 +12,6 @@ import Contact from  "../app/components/Contact"
 import Project from "../app/components/Projects"
 import Path from "../app/components/Path"
 
-export const InfoContext = React.createContext(info);
-export const FontContext = React.createContext(font)
 
 export default function Home() {
   return (

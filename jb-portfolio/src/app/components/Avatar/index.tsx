@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
-import imgjb from "../../../img/IMG_6126.jpg"
 
-
-import { FontContext, InfoContext } from "../../page";
+import info from "../../../info"
+import font from "../../../font"
 
 interface Props {}
 
 const Hero = () => {
-  const info = useContext(InfoContext);
-  const font = useContext(FontContext)
   return (
     <>
       <div
