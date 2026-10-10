@@ -21,7 +21,7 @@
     "emailjs": "^4.0.3",
     "express": "^4.19.2",
     "framer-motion": "^11.1.7",
-    "next": "14.2.3",
+    "next": "16.4.0",
     "nodemailer": "^10.0.9",
     "react": "^18.3.1",
     "react-animation-on-scroll": "^5.1.0",
